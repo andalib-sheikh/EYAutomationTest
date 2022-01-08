@@ -143,8 +143,8 @@ public class BasePage
 		sauceOptions.setCapability("name", "EY Automation Tests "+module);
 		Object data[][]=ReadExcel.getTestData("Setup");
 		platformName=data[0][0].toString();
-		browserName=data[0][0].toString();
-		browserVersion=data[0][0].toString();
+		browserName=data[0][1].toString();
+		browserVersion=data[2][0].toString();
 		DesiredCapabilities cap=new DesiredCapabilities();
 		cap.setCapability("sauce:options", sauceOptions);
 		cap.setCapability("platformName", platformName);
