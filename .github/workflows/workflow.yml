@@ -22,6 +22,20 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      # Export Sauce Username
+      - name: Export Sauce Username
+        env:
+          SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+        run:
+          echo SAUCE_USERNAME=$(echo $SAUCE_USERNAME)" >> $GITHUB_ENV
+          
+         # Export Sauce Key
+      - name: Export Sauce Key
+        env:
+          SAUCE_KEY: ${{ secrets.SAUCE_KEY }}
+        run:
+          echo SAUCE_KEY=$(echo $SAUCE_KEY)" >> $GITHUB_ENV
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
