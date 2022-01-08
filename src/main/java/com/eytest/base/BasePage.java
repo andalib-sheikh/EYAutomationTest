@@ -144,7 +144,7 @@ public class BasePage
 		Object data[][]=ReadExcel.getTestData("Setup");
 		platformName=data[0][0].toString();
 		browserName=data[0][1].toString();
-		browserVersion=data[2][0].toString();
+		browserVersion=data[0][2].toString();
 		DesiredCapabilities cap=new DesiredCapabilities();
 		cap.setCapability("sauce:options", sauceOptions);
 		cap.setCapability("platformName", platformName);
