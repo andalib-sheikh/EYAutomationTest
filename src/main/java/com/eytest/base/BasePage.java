@@ -152,7 +152,7 @@ public class BasePage
 		cap.setCapability("browserVersion", browserVersion);
 		String username=System.getenv("SAUCE_USERNAME");
 		String key=System.getenv("SAUCE_KEY");
-		String huburl="https://"+username+":"+key+"@ondemand.us-west-1.saucelabs.com:443/wd/hub";
+		String huburl="https://"+username+":"+key+"@ondemand.eu-central-1.saucelabs.com:443/wd/hub";
 		driver=new RemoteWebDriver(new URL(huburl),cap);
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
